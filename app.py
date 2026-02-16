@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from datetime import datetime, date, time, timedelta
-from streamlit_gsheets import GSheetsConnection
+import gspread
+from google.outth2.service_account import Credential
 
 # -----------------------------
 # CONFIG
@@ -198,3 +198,4 @@ else:
         st.cache_data.clear()
         st.success("Eliminato.")
         st.rerun()
+
