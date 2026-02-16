@@ -69,7 +69,6 @@ if not SHEET_URL:
     st.error("Inserisci gsheets_url nei secrets di Streamlit Cloud.")
     st.stop()
 
-conn = st.connection("gsheets", type=GSheetsConnection)
 
 @st.cache_data(ttl=10)
 def read_data():
@@ -199,6 +198,7 @@ else:
         st.cache_data.clear()
         st.success("Eliminato.")
         st.rerun()
+
 
 
 
