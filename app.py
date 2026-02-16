@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import gspread
-from google.outth2.service_account import Credential
+from google.oauth2.service_account import Credential
 
 # -----------------------------
 # CONFIG
@@ -198,4 +198,5 @@ else:
         st.cache_data.clear()
         st.success("Eliminato.")
         st.rerun()
+
 
